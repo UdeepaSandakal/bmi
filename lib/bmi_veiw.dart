@@ -21,31 +21,62 @@ class _BMIViewState extends State<BMIView> {
       ),
       body: Column(
         children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                height: 190,
-                color: Colors.black38,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Icon(
-                      Icons.male,
-                      color: Colors.white,
-                      size: 80.0,
+          Padding(
+            //making padding around the component
+            padding: const EdgeInsets.all(10.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Expanded(
+                  //To take the full space of the display,eventually it will take half of the screen
+                  child: Container(
+                    height: 190,
+                    color: Colors.black38,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Icon(
+                          Icons.male,
+                          color: Colors.white,
+                          size: 80.0,
+                        ),
+                        Text(
+                          'Male',
+                          style: TextStyle(
+                            fontSize: 25.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
                     ),
-                    Text(
-                      'Male',
-                      style: TextStyle(
-                        fontSize: 25.0,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
-              ),
-            ],
+                Expanded(
+                  //To take the full space of the display,eventually it will take half of the screen
+                  child: Container(
+                    height: 190,
+                    color: Colors.black38,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Icon(
+                          Icons.female,
+                          color: Colors.white,
+                          size: 80.0,
+                        ),
+                        Text(
+                          'Female',
+                          style: TextStyle(
+                            fontSize: 25.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
