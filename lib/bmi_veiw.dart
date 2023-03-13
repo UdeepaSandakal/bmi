@@ -221,12 +221,14 @@ class _BMIViewState extends State<BMIView> {
             color: Colors.pinkAccent,
             width: double.infinity,
             height: 90.0,
-            child: Text(
-              'CALCULATE YOUR BMI',
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 17.0,
+            child: Center(
+              child: Text(
+                'CALCULATE YOUR BMI',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 17.0,
+                ),
               ),
             ),
           ),
