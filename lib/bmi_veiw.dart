@@ -164,6 +164,52 @@ class _BMIViewState extends State<BMIView> {
                     ),
                   ),
                 ),
+                Expanded(
+                  child: Container(
+                    height: 190,
+                    color: Colors.black38,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text(
+                          'Age',
+                          style: TextStyle(fontSize: 20.0, color: Colors.white),
+                        ),
+                        Text(
+                          '25', //Just hard coded now,will be back
+                          style: TextStyle(
+                              fontSize: 40.0,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            CircleAvatar(
+                              backgroundColor: Colors.white24,
+                              radius: 30.0,
+                              child: Icon(
+                                Icons.remove,
+                                color: Colors.white,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            CircleAvatar(
+                              backgroundColor: Colors.white24,
+                              radius: 30.0,
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
