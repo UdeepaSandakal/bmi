@@ -164,6 +164,9 @@ class _BMIViewState extends State<BMIView> {
                     ),
                   ),
                 ),
+                SizedBox(
+                  width: 10.0,
+                ),
                 Expanded(
                   child: Container(
                     height: 190,
