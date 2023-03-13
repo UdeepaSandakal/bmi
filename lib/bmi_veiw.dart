@@ -51,6 +51,9 @@ class _BMIViewState extends State<BMIView> {
                     ),
                   ),
                 ),
+                SizedBox(
+                  width: 10.0,
+                ),
                 Expanded(
                   //To take the full space of the display,eventually it will take half of the screen
                   child: Container(
