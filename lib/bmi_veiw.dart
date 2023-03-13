@@ -216,6 +216,7 @@ class _BMIViewState extends State<BMIView> {
               ],
             ),
           ),
+          Spacer(), // to make the button go to the bottom and make some space
           Container(
             color: Colors.pinkAccent,
             width: double.infinity,
