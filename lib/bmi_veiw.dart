@@ -12,6 +12,13 @@ class BMIView extends StatefulWidget {
 class _BMIViewState extends State<BMIView> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: Colors.blueGrey,
+      appBar: AppBar(
+        leading: Icon(Icons.menu),
+        title: Text('BMI Calculator'),
+        backgroundColor: Colors.blueGrey,
+      ),
+    );
   }
 }
