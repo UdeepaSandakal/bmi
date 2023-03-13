@@ -81,31 +81,88 @@ class _BMIViewState extends State<BMIView> {
               ],
             ),
           ),
-          Container(
-            height: 200,
-            width: double.infinity,
-            color: Colors.black38,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          Padding(
+            padding: const EdgeInsets.symmetric(
+                horizontal: 10.0), // This will only make padding right & left
+            child: Container(
+              height: 200,
+              width: double.infinity,
+              color: Colors.black38,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    'Height',
+                    style: TextStyle(fontSize: 20.0, color: Colors.white),
+                  ),
+                  Text(
+                    '183cm', //This is just hard coded now
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Slider(
+                    value: 150,
+                    onChanged: (value) {},
+                    min: 0,
+                    max: 200,
+                    activeColor: Colors.amber,
+                    thumbColor: Colors.pinkAccent,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Row(
               children: [
-                Text(
-                  'Height',
-                  style: TextStyle(fontSize: 20.0, color: Colors.white),
-                ),
-                Text(
-                  '183cm', //This is just hard coded now
-                  style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold),
-                ),
-                Slider(
-                  value: 150,
-                  onChanged: (value) {},
-                  min: 0,
-                  max: 200,
-                  activeColor: Colors.amber,
-                  thumbColor: Colors.pinkAccent,
+                Expanded(
+                  child: Container(
+                    height: 190,
+                    color: Colors.black38,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text(
+                          'Weight',
+                          style: TextStyle(fontSize: 20.0, color: Colors.white),
+                        ),
+                        Text(
+                          '74', //Just hard coded now,will be back
+                          style: TextStyle(
+                              fontSize: 40.0,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            CircleAvatar(
+                              backgroundColor: Colors.white24,
+                              radius: 30.0,
+                              child: Icon(
+                                Icons.remove,
+                                color: Colors.white,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            CircleAvatar(
+                              backgroundColor: Colors.white24,
+                              radius: 30.0,
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ],
             ),
