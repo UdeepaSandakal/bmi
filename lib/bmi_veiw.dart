@@ -32,30 +32,7 @@ class _BMIViewState extends State<BMIView> {
                 SizedBox(
                   width: 10.0,
                 ),
-                Expanded(
-                  //To take the full space of the display,eventually it will take half of the screen
-                  child: Container(
-                    height: 190,
-                    color: Colors.black38,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Icon(
-                          Icons.female,
-                          color: Colors.white,
-                          size: 80.0,
-                        ),
-                        Text(
-                          'Female',
-                          style: TextStyle(
-                            fontSize: 25.0,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
+                GenderComponent(Icons.female, 'Female'),
               ],
             ),
           ),
