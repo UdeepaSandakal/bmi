@@ -28,11 +28,11 @@ class _BMIViewState extends State<BMIView> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                GenderComponent(Icons.male, 'Male'),
+                GenderComponent(icon: Icons.male, name: 'Male'),
                 SizedBox(
                   width: 10.0,
                 ),
-                GenderComponent(Icons.female, 'Female'),
+                GenderComponent(icon: Icons.female, name: 'Female'),
               ],
             ),
           ),
