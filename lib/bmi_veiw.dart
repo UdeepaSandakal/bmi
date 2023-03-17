@@ -1,3 +1,4 @@
+import 'package:bmi/components/gender_componet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -27,30 +28,7 @@ class _BMIViewState extends State<BMIView> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Expanded(
-                  //To take the full space of the display,eventually it will take half of the screen
-                  child: Container(
-                    height: 190,
-                    color: Colors.black38,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Icon(
-                          Icons.male,
-                          color: Colors.white,
-                          size: 80.0,
-                        ),
-                        Text(
-                          'Male',
-                          style: TextStyle(
-                            fontSize: 25.0,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
+                GenderComponent(Icons.male, 'Male'),
                 SizedBox(
                   width: 10.0,
                 ),
@@ -98,7 +76,7 @@ class _BMIViewState extends State<BMIView> {
                   Text(
                     '183cm', //This is just hard coded now
                     style: TextStyle(
-                        fontSize: 20.0,
+                        fontSize: 40.0,
                         color: Colors.white,
                         fontWeight: FontWeight.bold),
                   ),
