@@ -1,4 +1,5 @@
 import 'package:bmi/components/gender_componet.dart';
+import 'package:bmi/components/height_component.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -39,34 +40,10 @@ class _BMIViewState extends State<BMIView> {
           Padding(
             padding: const EdgeInsets.symmetric(
                 horizontal: 10.0), // This will only make padding right & left
-            child: Container(
-              height: 200,
-              width: double.infinity,
-              color: Colors.black38,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Text(
-                    'Height',
-                    style: TextStyle(fontSize: 20.0, color: Colors.white),
-                  ),
-                  Text(
-                    '183cm', //This is just hard coded now
-                    style: TextStyle(
-                        fontSize: 40.0,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  Slider(
-                    value: 150,
-                    onChanged: (value) {},
-                    min: 0,
-                    max: 200,
-                    activeColor: Colors.amber,
-                    thumbColor: Colors.pinkAccent,
-                  ),
-                ],
-              ),
+            child: HeightComponent(
+              height: (height) {
+                print(height);
+              },
             ),
           ),
           Padding(

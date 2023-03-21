@@ -3,15 +3,17 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/material.dart';
 
 class HeightComponent extends StatefulWidget {
-  Function(int) height; //To pass data to outside
+  Function(double) height; //To pass data to outside
 
-  HeightComponent({required this.height});
+  HeightComponent({required this.height}); // creating constuctor
 
   @override
   State<HeightComponent> createState() => _HeightComponentState();
 }
 
 class _HeightComponentState extends State<HeightComponent> {
+  double value = 150;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,15 +28,20 @@ class _HeightComponentState extends State<HeightComponent> {
             style: TextStyle(fontSize: 20.0, color: Colors.white),
           ),
           Text(
-            '183cm', //This is just hard coded now
+            '${value.toStringAsFixed(0)} cm', //show double value as int value
             style: TextStyle(
                 fontSize: 40.0,
                 color: Colors.white,
                 fontWeight: FontWeight.bold),
           ),
           Slider(
-            value: 150,
-            onChanged: (value) {},
+            value: value,
+            onChanged: (v) {
+              widget.height(v); //to get value into outside
+              setState(() {
+                value = v;
+              });
+            },
             min: 0,
             max: 200,
             activeColor: Colors.amber,
